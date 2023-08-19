@@ -136,7 +136,7 @@ ion-icon{
 .text-justify {
   text-align: justify;
 }
-.container-fluid{
+.fluid{
   background-color: var(--lightblue);
   
 }
@@ -158,6 +158,10 @@ ion-icon{
 .btn{
   background-color:var(--lightblue);
   color: aliceblue;
+}
+.btn:hover{
+  background-color: aliceblue;
+  border:1px solid rgb(156, 190, 204) ;
 }
 .piePagina {
   background-color:var(--lightblue);
