@@ -1,0 +1,211 @@
+:root {
+  --lightblue:rgb(156 190 204);
+ --darkgray:#818688;
+ --lightgray:#A0A6A7;
+ /*--bs-navbar-color:rgb(156 190 204);*/
+ --aliceblue:rgb(240 248 255);
+}
+@font-face {
+  font-family:'GothamRnd-Light_0' ;
+  src: url("/fonts/GothamRnd-Light_0.otf")format('otf');
+}
+@font-face {
+  font-family:'GothamRnd-Bold_0 ';
+  src: url('/fonts/GothamRnd-Bold_0.otf')format('otf');
+}
+
+.navcontainer{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  color:var(--lightblue) ;
+  background-color:white;
+  text-align: center;
+}
+main{
+  margin-top: 180px;
+  overflow-y:scroll ;
+  font-family: 'GothamRnd-light_0',sans-serif;
+}
+.big{
+  font-size:1rem ;
+  margin-left:80px ;
+}
+
+.bg-body-tertiary{
+  background-color:white !important;
+}
+.custom-hover:hover{
+  color:var(--lightgray); 
+}
+.custom-text-color{
+    color: var(--lightblue); 
+    font-family: 'GothamRnd-Light_0',sans-serif;
+}
+/* Cambiar el color de fondo y el color del texto en :hover y :active de los enlaces de navegación */
+.navbar-nav .nav-link:hover
+ {
+  color:var(--aliceblue); /* Cambiar el color del texto en hover y active */
+  background-color: var(--lightblue); /* Cambiar el color de fondo en hover y active */
+  border-radius:10px ;
+}
+.modal{
+  z-index: 3;
+  top: 190px;
+}
+
+#logo{
+  max-width: 300px;
+}
+ion-icon{
+  color:var(--darkgray);
+  font-size:35px ;
+}
+.red1{
+  position:absolute;
+  top:1px ;
+  right:10px ;
+}
+.red2{
+  position:absolute;
+  top:1px ;
+  right:50px ;
+}
+/*quienes somos*/
+
+.titulo{
+  background-color: var(--lightblue);
+  font-family:'GothamRnd-Bold_0 ',sans-serif;
+  font-size:0.9rem ;
+  color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+}
+.titulos{
+ background-color: var(--lightblue);
+ width:100% ; 
+}
+.titulo.grande{
+  text-align: center;
+  justify-content: center;
+  border-radius: 0%;
+  font-size:larger ;
+}
+.titulo-azul{
+  background-color: aliceblue;
+  color:var(--lightblue) ;
+  font-weight:300 ;
+  text-align: center;
+}
+.detalle{
+  font-family:'GothamRnd-Bold_0',sans-serif ; 
+  font-size: 1rem;
+  color: var(--lightblue);
+}
+.imgcontainer{
+  position:relative ;
+  width: 100%;
+}
+.subtitle{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  text-align: center;
+  font-family: 'GothamRnd-Light_0',sans-serif;
+  font-weight: 200;
+  color:aliceblue;
+  background-color:rgb(156, 190, 204,0.70 ) ;
+  width: 80%;
+}
+.espaciado{
+  padding-top: 30px;
+  padding-bottom: 30px ;
+}
+.card{
+  border: none;
+}
+/* Estilo para las imágenes dentro de las cards */
+.card .card-img-top {
+  object-fit: cover; /* Ajustar la imagen para cubrir el espacio de la imagen */
+  height: 200px; /* Establecer una altura fija para todas las imágenes */
+}
+
+.text-justify {
+  text-align: justify;
+}
+.container-fluid{
+  background-color: var(--lightblue);
+  
+}
+.form{
+  background-color:aliceblue;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding-top:10px ;
+}
+.form-control{
+  border:1px solid gray ;
+}
+.form-label{
+  font-family: 'GothamRnd-Bold_0',sans-serif;
+  color: #818688;
+  font-weight: 300;
+}
+
+.btn{
+  background-color:var(--lightblue);
+  color: aliceblue;
+}
+.piePagina {
+  background-color:var(--lightblue);
+  padding: 20px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+  gap: 20px; /* Espacio entre las columnas */
+}
+
+.redes, .contacto {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: aliceblue;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  gap: 10px; /* Espacio entre los elementos (logos) */
+}
+
+.redes a {
+  text-decoration: none; /* Elimina el subrayado en los enlaces */
+  color:white; /* Cambia el color del texto si lo deseas */
+}
+
+.redes ion-icon {
+  font-size: 34px; /* Ajusta el tamaño de los íconos según tu preferencia */
+  color: aliceblue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
