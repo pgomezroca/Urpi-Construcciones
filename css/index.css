@@ -5,29 +5,37 @@
  /*--bs-navbar-color:rgb(156 190 204);*/
  --aliceblue:rgb(240 248 255);
 }
-@font-face {
-  font-family:'GothamRnd-Light_0' ;
-  src: url("/fonts/GothamRnd-Light_0.otf")format('otf');
+body{
+   font-family: ;
 }
 @font-face {
-  font-family:'GothamRnd-Bold_0 ';
-  src: url('/fonts/GothamRnd-Bold_0.otf')format('otf');
+  font-family:'Roboto-Regular' ;
+  src: url("/fonts/Roboto-Regular.ttf")format('ttf');
 }
-
+@font-face {
+  font-family:'Roboto-Black ';
+  src: url('/fonts/Roboto-Black.ttf')format('ttf');
+}
+.icono{
+  width: 100px;
+  height: auto;
+  margin-left: 23px;
+}
 .navcontainer{
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 2;
-  color:var(--lightblue) ;
+  color:#DE6600 ;
   background-color:white;
   text-align: center;
+  font-weight: 800;
 }
 main{
   margin-top: 180px;
   overflow-y:scroll ;
-  font-family: 'GothamRnd-light_0',sans-serif;
+  font-family: 'Roboto-Regular',sans-serif;
 }
 .big{
   font-size:1rem ;
@@ -41,14 +49,14 @@ main{
   color:var(--lightgray); 
 }
 .custom-text-color{
-    color: var(--lightblue); 
-    font-family: 'GothamRnd-Light_0',sans-serif;
+    color: #DE6600; 
+    font-family: 'Roboto-Black',sans-serif;
 }
 /* Cambiar el color de fondo y el color del texto en :hover y :active de los enlaces de navegación */
 .navbar-nav .nav-link:hover
  {
-  color:var(--aliceblue); /* Cambiar el color del texto en hover y active */
-  background-color: var(--lightblue); /* Cambiar el color de fondo en hover y active */
+  color:#DE6600; /* Cambiar el color del texto en hover y active */
+  background-color:#EDEDEE ; /* Cambiar el color de fondo en hover y active */
   border-radius:10px ;
 }
 .modal{
