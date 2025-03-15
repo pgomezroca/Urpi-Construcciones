@@ -1,21 +1,31 @@
 :root {
-  --lightblue:rgb(156 190 204);
+ 
  --darkgray:#818688;
  --lightgray:#A0A6A7;
  /*--bs-navbar-color:rgb(156 190 204);*/
  --aliceblue:rgb(240 248 255);
+ --dark:#373435;
+}
+.custom-bg-body-tertiary {
+  background-color: #DE6600; /* Aquí pones el color que deseas */
 }
 body{
-   font-family: ;
+   font-family:'Roboto-Regular';
+   
 }
 @font-face {
   font-family:'Roboto-Regular' ;
-  src: url("/fonts/Roboto-Regular.ttf")format('ttf');
+  src: url("/fonts/Roboto-Regular.ttf")format('truetype');
 }
 @font-face {
   font-family:'Roboto-Black ';
-  src: url('/fonts/Roboto-Black.ttf')format('ttf');
+  src: url('/fonts/Roboto-Black.ttf')format('truetype');
 }
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-out; /* La transición será de 0.5 segundos */
+}
+/*header*/
 .icono{
   width: 100px;
   height: auto;
@@ -27,50 +37,121 @@ body{
   left: 0;
   width: 100%;
   z-index: 2;
-  color:#DE6600 ;
-  background-color:white;
   text-align: center;
   font-weight: 800;
+  
 }
-main{
-  margin-top: 180px;
-  overflow-y:scroll ;
-  font-family: 'Roboto-Regular',sans-serif;
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color:var(--dark); 
+  z-index:3 ;
 }
-.big{
-  font-size:1rem ;
-  margin-left:80px ;
+.contact-info {
+  text-align: right;
 }
 
-.bg-body-tertiary{
-  background-color:white !important;
+.contact-info p {
+  margin: 5px 0;
 }
-.custom-hover:hover{
-  color:var(--lightgray); 
+
+.contact-info a {
+  color: aliceblue;
+  text-decoration: none;
 }
-.custom-text-color{
-    color: #DE6600; 
-    font-family: 'Roboto-Black',sans-serif;
+
+.contact-info .contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
 }
+.navbar{
+    
+    display: flex;
+    justify-content:center; 
+    align-items:baseline !important; 
+    margin-right:0px !important;
+   
+}
+.nav-link{
+  color: #EDEDEE !important;
+  font-size:2,5rem ;
+  font-weight: 300;
+}
+/* Efecto hover con transición suave */
+.navbar-nav .nav-link {
+  transition: all 0.3s ease; /* Suaviza los cambios al pasar el mouse */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #EDEDEE;
+  background-color: #373435;
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del enlace */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block; 
+}
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  z-index: 1000;
+}
+.navbar-nav {
+  display: flex; 
+  justify-content: center; 
+  width: 100%; 
+  padding: 0; 
+  margin: 0; 
+}
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Cambiar el color de fondo y el color del texto en :hover y :active de los enlaces de navegación */
 .navbar-nav .nav-link:hover
  {
-  color:#DE6600; /* Cambiar el color del texto en hover y active */
-  background-color:#EDEDEE ; /* Cambiar el color de fondo en hover y active */
-  border-radius:10px ;
-}
-.modal{
-  z-index: 3;
-  top: 190px;
-}
-
-#logo{
   max-width: 300px;
 }
 ion-icon{
   color:var(--darkgray);
   font-size:35px ;
 }
+/*main*/
+main{
+  margin-top: 100px;
+  overflow-y:scroll ;
+  font-family: 'Roboto-Regular',sans-serif;
+}
+main::-webkit-scrollbar {
+  width: 0; 
+  background: transparent; /* Fondo transparente */
+}
+
+.big{
+  font-size:1rem ;
+  margin-left:80px ;
+}
+
+
+.custom-hover:hover{
+  color:var(--lightgray); 
+}
+.custom-text-color{
+    color:#373435; 
+    font-family: 'Roboto-Black',sans-serif;
+}
+
+.modal{
+  z-index: 3;
+  top: 190px;
+}
+
+
 .red1{
   position:absolute;
   top:1px ;
@@ -84,7 +165,7 @@ ion-icon{
 /*quienes somos*/
 
 .titulo{
-  background-color: var(--lightblue);
+  background-color: #EDEDEE;
   font-family:'GothamRnd-Bold_0 ',sans-serif;
   font-size:0.9rem ;
   color: aliceblue;
@@ -103,7 +184,7 @@ ion-icon{
   font-size:larger ;
 }
 .titulo-azul{
-  background-color: aliceblue;
+  background-color: #EDEDEE;
   color:var(--lightblue) ;
   font-weight:300 ;
   text-align: center;
@@ -117,16 +198,29 @@ ion-icon{
   position:relative ;
   width: 100%;
 }
-.subtitle{
+.textContainer{
   position: absolute;
   top: 15%;
   left: 10%;
   text-align: center;
-  font-family: 'GothamRnd-Light_0',sans-serif;
+  
+  width: 84%; 
+}
+.subtitle{
+  font-family: 'Roboto-Regular';
   font-weight: 200;
   color:aliceblue;
-  background-color:rgb(156, 190, 204,0.70 ) ;
-  width: 80%;
+  
+  background-color: #373435;
+ 
+}
+
+.tittle{
+  
+}
+.subtitleSmall{
+  margin-top: 10px; /* Espacio entre h2 y h6 */
+  background-color: transparent;
 }
 .espaciado{
   padding-top: 30px;
