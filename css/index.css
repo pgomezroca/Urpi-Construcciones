@@ -118,9 +118,10 @@ body{
   max-width: 300px;
 }
 ion-icon{
-  color:var(--darkgray);
+  color:aliceblue;
   font-size:35px ;
 }
+
 /*main*/
 main{
   margin-top: 100px;
