@@ -63,7 +63,7 @@
             </ul>
           </li>
           <li class="nav-item ">
-            <a class="nav-link  custom-text-color custom-hover big" href="#contacto" >
+            <a class="nav-link  custom-text-color custom-hover big" href="#form" >
               Contacto
             </a>
             
@@ -77,8 +77,8 @@
    <section class="imgcontainer row container-fluid">
     <img  src="./img/casa-nueva.jpg" alt="casa">
     <div class="textContainer">
-      <h2 class="subtitle tittle">Construcciones civiles</h2>
-      <h6 class=" subtittle subtitleSmall ">Comprometidos con la calidad</h6>
+      <h2 class="subtitle subtitleSmall">Construcciones civiles</h2>
+      <h5 class=" subtittle subtitleSmall ">Comprometidos con la calidad</h5>
     </div>
    </section>
    <!--quienes somos-->
@@ -179,43 +179,61 @@
     </article >
   </section>
 <!--footer-->
-
-  
-   
- 
- <footer class="piePagina" id="piepagina">
-  <div class="footer-grid">
+<footer class="piePagina" id="form">
+  <!-- Bloque superior del footer: el formulario -->
+  <div class="footer-top" >
     <div class="container-fluid fluid">
       <div class="row justify-content-center contenedor">
-        <section class="col-12 col-lg-6 form  ">
-         <form  action="https://formsubmit.co/bbbed88243ffb419fe42a6a59bafccfc" method="POST"class="mb-3  mt-25 col-12" class="form">
-          <div>
-           <label for="exampleFormControlInput1" class="form-label"> Email </label>
-           <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="nombre@example.com">
-          </div>
-         <div class="mb-3 ">
-           <label for="exampleFormControlTextarea1" class="form-label">Motivo de su consulta. </label>
-           <textarea name="motivo"  class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-         </div>
-         <div class="buttoncontainer">
-            <button type="submit"  class="btn  button" >Enviar</button>
-         </div>
-       </form>
-     </section>
-     </div>
+        <section class="col-12 col-lg-6 form-section">
+          <form action="https://formsubmit.co/bbbed88243ffb419fe42a6a59bafccfc" 
+                method="POST"
+                class=" form"
+                >
+                <h2 class="form-title">Contáctanos</h2>
+            <div>
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" name="email" class="form-control" 
+                     id="exampleFormControlInput1" 
+                     placeholder="nombre@example.com">
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">
+                Motivo de su consulta.
+              </label>
+              <textarea name="motivo" class="form-control" 
+                        id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="buttoncontainer">
+              <button type="submit" class="btn button">Enviar</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </div>
   </div>
- 
- 
-    <div class="redes">
-      <a href="https://www.instagram.com/conecta.ing/?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
-      <a href="https://www.linkedin.com/company/conecta-ingenieria-proyectos/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
-    </div>
-    <div class="contacto" id="cont">
-      <h5 id="mail">Email: jmu.conectaing@gmail.com</h5>
-      <h5 id="tel">Email: cv.conectaing@gmail.com</h5>
-    </div>
+
+  <!-- Bloque inferior del footer: redes y mails -->
+  <div class="footer-bottom">
+    <ul class="info-list">
+      <li>
+        <a href="https://www.instagram.com/conecta.ing/?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" 
+           target="_blank">
+          <ion-icon name="logo-instagram"></ion-icon> Instagram
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/conecta-ingenieria-proyectos/" 
+           target="_blank">
+          <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
+        </a>
+      </li>
+      <li>Email: jmu.conectaing@gmail.com</li>
+      <li>Email: cv.conectaing@gmail.com</li>
+    </ul>
   </div>
 </footer>
+
+ 
 </main>
 <script src="js/index.js"></script>
 

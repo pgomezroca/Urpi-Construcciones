@@ -7,7 +7,13 @@
  --dark:#373435;
 }
 .custom-bg-body-tertiary {
-  background-color: #DE6600; /* Aquí pones el color que deseas */
+  background-color: rgb(222, 102, 0); /* Aquí pones el color que deseas */
+}
+html {
+  scroll-behavior: smooth;
+}
+#form {
+  scroll-margin-top: 180px; /* ajusta según la altura de tu navbar */
 }
 body{
    font-family:'Roboto-Regular';
@@ -140,6 +146,7 @@ main::-webkit-scrollbar {
 
 
 .custom-hover:hover{
+  text-decoration: underline;
   color:var(--lightgray); 
 }
 .custom-text-color{
@@ -208,11 +215,11 @@ main::-webkit-scrollbar {
   width: 84%; 
 }
 .subtitle{
-  font-family: 'Roboto-Regular';
-  font-weight: 200;
-  color:aliceblue;
+  font-family: 'Roboto-Regular',sans-serif;
+  font-weight: 300;
+  color:#DE6600;
   
-  background-color: #373435;
+  background-color: transparent;
  
 }
 
@@ -220,8 +227,10 @@ main::-webkit-scrollbar {
   
 }
 .subtitleSmall{
-  margin-top: 10px; /* Espacio entre h2 y h6 */
+  margin-top: 10px; 
   background-color: transparent;
+  font-weight: 300;
+  color: #7b3801;
 }
 .espaciado{
   padding-top: 30px;
@@ -243,67 +252,112 @@ main::-webkit-scrollbar {
   background-color: var(--lightblue);
   
 }
-.form{
-  background-color:aliceblue;
-  border: 1px solid gray;
-  border-radius: 10px;
-  padding-top:10px ;
-}
-.form-control{
-  border:1px solid gray ;
-}
-.form-label{
-  font-family: 'GothamRnd-Bold_0',sans-serif;
-  color: #818688;
-  font-weight: 300;
-}
-
-.btn{
-  background-color:var(--lightblue);
-  color: aliceblue;
-}
-.btn:hover{
-  background-color: aliceblue;
-  border:1px solid rgb(156, 190, 204) ;
-}
+/*footer*/
+/* Estilos generales del footer */
 .piePagina {
-  background-color:var(--lightblue);
+  background-color: #373435;
   padding: 20px;
+  color: aliceblue; /* Para que el texto sea blanco */
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-  gap: 20px; /* Espacio entre las columnas */
+/* Bloque superior (formulario) */
+.footer-top {
+  margin-bottom: 20px; /* Algo de espacio respecto al bloque de abajo */
 }
 
-.redes, .contacto {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Formulario */
+/* Contenedor principal del formulario */
+.form {
+  background-color: #EDEDEE;      
+  border: 3px solid orange;       
+  border-radius: 10px;            
+  padding: 1.5rem;                
+  max-width: 500px;               /* Ancho máximo para que luzca mejor */
+  margin: 0 auto;                 /* Centrar el formulario horizontalmente */
+}
+
+/* Título del formulario */
+.form-title {
+  text-align: center;
+  color: #818688;                 /* Gris para mantener el estilo */
+  margin-bottom: 1rem;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+/* Agrupación de cada campo para espaciar */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+/* Estilo de las etiquetas */
+.form-label {
+  display: block;                 /* Que ocupe una línea entera */
+  margin-bottom: 0.5rem;          /* Separación con el input */
+  color: #818688;                 /* Gris */
+  font-weight: 300;               /* Ligero */
+}
+
+/* Campos de texto e inputs */
+.form-control {
+  width: 100%;                    /* Todo el ancho */
+  border: 3px solid orange;       /* Borde naranja */
+  border-radius: 5px;             /* Ligeramente redondeado */
+  padding: 0.5rem;                /* Espaciado interno */
+  font-size: 1rem;                /* Ajusta el tamaño de texto */
+  color: #333;                    /* Texto oscuro */
+  box-sizing: border-box;
+}
+
+/* Contenedor del botón, para centrarlo */
+.buttoncontainer {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+/* Botón de envío */
+.btn {
+  background-color:#DE6600; 
   color: aliceblue;
+  border: none;                   /* Sin borde extra */
+  padding: 0.75rem 1.25rem;       /* Espaciado interno */
+  border-radius: 5px;             /* Esquinas redondeadas */
+  font-size: 1rem;                /* Tamaño de fuente */
+  cursor: pointer; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);                /* Mano al pasar el mouse */
 }
 
-.redes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  gap: 10px; /* Espacio entre los elementos (logos) */
+/* Hover del botón */
+.btn:hover {
+  background-color: aliceblue;    /* Fondo claro */
+  color:#373435;        /* Texto azul */
+  border: 1px solid var(--lightblue);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.redes a {
-  text-decoration: none; /* Elimina el subrayado en los enlaces */
-  color:white; /* Cambia el color del texto si lo deseas */
+/* Lista de info (redes, mails) */
+.info-list {
+  list-style: none; /* Quita viñetas */
+  padding: 0;       
+  margin: 0;
 }
 
-.redes ion-icon {
-  font-size: 34px; /* Ajusta el tamaño de los íconos según tu preferencia */
-  color: aliceblue;
+.info-list li {
+  margin-bottom: 10px; /* Espacio entre cada elemento */
 }
 
+/* Links dentro de la lista */
+.info-list a {
+  color: aliceblue;      /* Texto blanco */
+  text-decoration: none; /* Sin subrayado, si así lo prefieres */
+}
+
+/* Ion-icon dentro de la lista, por si quieres ajustarlo */
+.info-list ion-icon {
+  font-size: 1.2rem; /* Ajusta según tu gusto */
+  vertical-align: middle; /* Para centrar mejor con el texto */
+  margin-right: 5px; 
+}
 
 
 
