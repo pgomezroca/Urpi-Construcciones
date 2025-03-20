@@ -31,10 +31,7 @@ body{
   font-family:'Roboto-Black ';
   src: url('/fonts/Roboto-Black.ttf')format('truetype');
 }
-.fade-out {
-  opacity: 0;
-  transition: opacity 0.5s ease-out; /* La transición será de 0.5 segundos */
-}
+
 /*header*/
 .icono{
   width: 100px;
@@ -89,6 +86,7 @@ body{
   color: #EDEDEE !important;
   font-size:3,5rem ;
   font-weight: 900;
+  cursor: pointer;
 }
 /* Efecto hover con transición suave */
 .navbar-nav .nav-link {
@@ -331,7 +329,7 @@ main::-webkit-scrollbar {
 /* Contenedor principal de dos columnas */
 .footer-container {
   display: flex;
-  gap: 10rem;                     /* Separación horizontal entre columnas */
+  gap: 10rem;                     
   justify-content: space-between;/* Reparte las columnas a los extremos */
   align-items: flex-start;       /* Alinear columnas en la parte superior */
 }
@@ -471,6 +469,39 @@ main::-webkit-scrollbar {
   color: #333;
 }
 
+/*media queries*/
+@media (max-width: 600px) {
+  main {
+    padding-top: 120px; /* Ajusta este valor según la altura de la navbar */
+  }
+  .icono {
+    margin-left: 10px; 
+}
+#quienes-somos {
+  scroll-margin-top: 100px; 
+}
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+ 
+  .footer-col {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  
+  .footer-links ion-icon {
+    font-size: 20px;
+  }
+  
+  
+  .footer-links .info-list {
+    display: block;
+  }
+}
 
 
 
