@@ -18,10 +18,16 @@
   <div class="top-header">
     <img src="./img/urpi-editado-gris.png" alt="logo" id="logo" class="icono">
     <div class="contact-info">
-      <p><a href="https://www.google.com/maps?q=Boulevard 9 de julio 1850,+Yerba buena,+Tucuman" target="_blank"><i class="fas fa-map-marker-alt"></i>Boulevard 9 de julio 1850, Yerba Buena
+      
+      <p> <a 
+        href="https://www.instagram.com/urpiconstrucciones?igsh=MWxuNm1mdDd5cnAxdQ==" 
+        target="_blank"
+      ><ion-icon name="logo-instagram"></ion-icon> Instagram
       </a></p>
       <p><a href="tel:+123456789">📞 Celular: +123 456 789</a></p>
       <p><a href="mailto:email@example.com">✉️ email@example.com</a></p>
+      <p><a href="https://www.google.com/maps?q=Boulevard 9 de julio 1850,+Yerba buena,+Tucuman" target="_blank"><i class="fas fa-map-marker-alt"></i>Boulevard 9 de julio 1850, Yerba Buena
+      </a></p>
     </div>
   </div> 
  
@@ -39,11 +45,9 @@
     </button>
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ">
+         
           <li class="nav-item">
-            <a class="nav-link  custom-text-color custom-hover big" aria-current="page" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link  custom-text-color custom-hover big" aria-current="page" href="nosotros.html">Nosotros</a>
+            <a class="nav-link  custom-text-color custom-hover big" aria-current="page" href="#quienes-somos">Nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link custom-text-color custom-hover big" href="#">Proyectos</a>
@@ -82,51 +86,43 @@
     </div>
    </section>
    <!--quienes somos-->
-      <div class="container-fluid" id="quienessomos">
-      <section class="container-fluid espaciado" >
-            <div><h2 class="titulo-azul" >Quienes somos</h2></div>
-       <!--columna de arriba-->
-         <div class="row espaciado">
-             <div class="col-12 col-lg-6">
-              <h2 class="titulo " >Quienes somos</h2>
-              <p class="text-justify">Somos una empresa de profesionales, que trabajan de manera estrechamente
-                vinculada al cliente, con gran capacidad de adaptación a través de la innovación,
-                siempre buscando la excelencia en la ingeniería.</p>
-             </div>
-             <div class="col-12 col-lg-6 ">
-              <h2 class="titulo" id="titulo">Misión</h2>
-              <p class="text-justify">Somos un estudio dedicado al desarrollo de proyectos de ingeniería,
-                abarcando el diseño y cálculo de
-                estructuras de hormigón y acero.</p>
-           
-          </div>
-           <!--columna izquierda-->
-         <div class="row espaciado">
-        </div>
-        <div class="col-12 col-lg-6">
-         <h2 class="titulo">Valores</h2>
-         <p class="text-justify"> Servicios con un alto nivel de profesionalismo,
-            asegurando a nuestros clientes cercanía y atención personalizada.
-            Capacidad de adaptación e innovación  para lograr lo mejor en cada proyecto.
-           Comprometidos con la búsqueda  de la excelencia en todo lo que hacemos.</p>
-       </div>
-            <!--columna derecha-->
-            <div class="col-12 col-lg-6 ">
-                <h2 class="titulo">Visión</h2>
-                <p class="text-justify">Ser el estudio líder en el mercado, por
-                  su estilo de trabajo estrechamente
-                  vinculado al cliente y por su capacidad
-                  
-                  de innovación. De esta forma, CONEC
-                  TAR las necesidades de la sociedad
-                  
-                  con la ingeniería a través de soluciones
-                  concretas.</p>
-            </div>
-         </div>
-       </section>
-    </div>
+   <section class="quienes-somos" id="quienes-somos">
+    <!-- Capa oscura/semioscura encima de la foto -->
+    <div class="overlay"></div>
+  
+    <!-- Contenido principal de la sección -->
+    <div class="contenido">
+      <h2 class="titulo-seccion">Quiénes Somos</h2>
       
+      <div class="columnas">
+        <div class="col">
+          <h3>Misión</h3>
+          <p>
+            Lograr que cada obra sea una experiencia eficiente, sin imprevistos. Queremos que nuestros clientes confíen en que cumpliremos con lo prometido, 
+            entregando en tiempo y forma,con seguridad y profesionalismo.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Visión</h3>
+          <p>
+            Ser referencia en el sector de la construcción, demostrando que es posible trabajar con orden, tecnología y compromiso.
+             No solo queremos construir,
+             queremos que vivas la experiencia de construir con nosotros.
+          </p>
+        </div>
+        <div class="col">
+          <h3>Valores</h3>
+          <p>
+            En Urpi Construcciones, garantizamos seguridad,
+             cumplimiento de plazos y presupuestos, profesionalismo,
+              organización impecable y una constante innovación
+               para ofrecerte proyectos de calidad superior.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
       <!--servicios-->
 
    <section  class="row espaciado " id="servicios">
@@ -180,58 +176,101 @@
   </section>
 <!--footer-->
 <footer class="piePagina" id="form">
-  <!-- Bloque superior del footer: el formulario -->
-  <div class="footer-top" >
-    <div class="container-fluid fluid">
-      <div class="row justify-content-center contenedor">
-        <section class="col-12 col-lg-6 form-section">
-          <form action="https://formsubmit.co/bbbed88243ffb419fe42a6a59bafccfc" 
-                method="POST"
-                class=" form"
-                >
-                <h2 class="form-title">Contáctanos</h2>
-            <div>
-              <label for="exampleFormControlInput1" class="form-label">Email</label>
-              <input type="email" name="email" class="form-control" 
-                     id="exampleFormControlInput1" 
-                     placeholder="nombre@example.com">
-            </div>
-            <div class="mb-3">
-              <label for="exampleFormControlTextarea1" class="form-label">
-                Motivo de su consulta.
-              </label>
-              <textarea name="motivo" class="form-control" 
-                        id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <div class="buttoncontainer">
-              <button type="submit" class="btn button">Enviar</button>
-            </div>
-          </form>
-        </section>
-      </div>
+  <!-- Contenedor principal del footer (2 columnas) -->
+  <div class="footer-container">
+    <!-- Columna Izquierda: Formulario -->
+    <div class="footer-col footer-form">
+      <form 
+        action="https://formsubmit.co/bbbed88243ffb419fe42a6a59bafccfc"
+        method="POST"
+        class="form"
+      >
+        <h2 class="form-title">Contáctanos</h2>
+        <div class="form-group">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input 
+            type="email" 
+            name="email" 
+            class="form-control" 
+            id="exampleFormControlInput1" 
+            placeholder="nombre@example.com"
+          >
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlTextarea1" class="form-label">
+            Motivo de su consulta
+          </label>
+          <textarea 
+            name="motivo" 
+            class="form-control" 
+            id="exampleFormControlTextarea1" 
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="buttoncontainer">
+          <button type="submit" class="btn button">Enviar</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Columna Derecha: Redes y mails -->
+    <div class="footer-col footer-links">
+      <ul class="info-list">
+        <li>
+          <a 
+            href="https://www.instagram.com/urpiconstrucciones?igsh=MWxuNm1mdDd5cnAxdQ==" 
+            target="_blank"
+          >
+            <ion-icon name="logo-instagram"></ion-icon> Instagram
+          </a>
+        </li>
+        <li>
+          <a 
+            href="https://www.linkedin.com/company/conecta-ingenieria-proyectos/" 
+            target="_blank"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
+          </a>
+        </li>
+        <li>Email: jmu.conectaing@gmail.com</li>
+        
+      </ul>
     </div>
   </div>
 
-  <!-- Bloque inferior del footer: redes y mails -->
-  <div class="footer-bottom">
-    <ul class="info-list">
-      <li>
-        <a href="https://www.instagram.com/conecta.ing/?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D" 
-           target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon> Instagram
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/company/conecta-ingenieria-proyectos/" 
-           target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon> LinkedIn
-        </a>
-      </li>
-      <li>Email: jmu.conectaing@gmail.com</li>
-      <li>Email: cv.conectaing@gmail.com</li>
-    </ul>
+  <!-- Sección blanca inferior -->
+  <div class="footer-empresas">
+    <h3>Empresas que confiaron en nosotros</h3>
+    <!-- Aquí podrías agregar logos o más contenido -->
+    <div class="empresas-grid">
+      <div class="empresa">
+        <div class="logo" style="background-color: #FF5733;"></div>
+        <p>Empresa 1</p>
+      </div>
+      <div class="empresa">
+        <div class="logo" style="background-color: #33A1FF;"></div>
+        <p>Empresa 2</p>
+      </div>
+      <div class="empresa">
+        <div class="logo" style="background-color: #75FF33;"></div>
+        <p>Empresa 3</p>
+      </div>
+      <div class="empresa">
+        <div class="logo" style="background-color: #FF33D4;"></div>
+        <p>Empresa 4</p>
+      </div>
+      <div class="empresa">
+        <div class="logo" style="background-color: #FFB733;"></div>
+        <p>Empresa 5</p>
+      </div>
+      <div class="empresa">
+        <div class="logo" style="background-color: #8E44AD;"></div>
+        <p>Empresa 6</p>
+      </div>
+    </div>
   </div>
 </footer>
+
 
  
 </main>

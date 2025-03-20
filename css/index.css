@@ -6,14 +6,18 @@
  --aliceblue:rgb(240 248 255);
  --dark:#373435;
 }
+:root {
+  scroll-padding-top: 180px; /* Ajusta a la altura de tu header */
+}
 .custom-bg-body-tertiary {
   background-color: rgb(222, 102, 0); /* Aquí pones el color que deseas */
 }
 html {
   scroll-behavior: smooth;
 }
-#form {
-  scroll-margin-top: 180px; /* ajusta según la altura de tu navbar */
+
+#quienes-somos{
+  scroll-margin-top: 600px; 
 }
 body{
    font-family:'Roboto-Regular';
@@ -83,8 +87,8 @@ body{
 }
 .nav-link{
   color: #EDEDEE !important;
-  font-size:2,5rem ;
-  font-weight: 300;
+  font-size:3,5rem ;
+  font-weight: 900;
 }
 /* Efecto hover con transición suave */
 .navbar-nav .nav-link {
@@ -94,7 +98,7 @@ body{
 .navbar-nav .nav-link:hover {
   color: #EDEDEE;
   background-color: #373435;
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño del enlace */
+  transform: scale(1.1); 
 }
 
 .nav-item.dropdown:hover .dropdown-menu {
@@ -125,20 +129,8 @@ body{
 }
 ion-icon{
   color:aliceblue;
-  font-size:35px ;
+  font-size:15px ;
 }
-
-/*main*/
-main{
-  margin-top: 100px;
-  overflow-y:scroll ;
-  font-family: 'Roboto-Regular',sans-serif;
-}
-main::-webkit-scrollbar {
-  width: 0; 
-  background: transparent; /* Fondo transparente */
-}
-
 .big{
   font-size:1rem ;
   margin-left:80px ;
@@ -154,10 +146,86 @@ main::-webkit-scrollbar {
     font-family: 'Roboto-Black',sans-serif;
 }
 
-.modal{
-  z-index: 3;
-  top: 190px;
+
+/*main*/
+main{
+  margin-top: 100px;
+  overflow-y:scroll ;
+  font-family: 'Roboto-Regular',sans-serif;
 }
+main::-webkit-scrollbar {
+  width: 0; 
+  background: transparent; /* Fondo transparente */
+}
+
+/*quienes somos nuevo*/
+/* Sección principal con imagen de fondo */
+.quienes-somos {
+  position: relative;                 /* Para que el .overlay se ubique encima */
+  background: url("../img/casaeditada2.") no-repeat center center;
+  background-size: cover;            /* Ajusta la imagen para cubrir la sección */
+  padding: 4rem 2rem;                /* Espacio vertical y horizontal */
+  color: #fff;                       /* Texto blanco */
+  overflow: hidden;                  /* Asegura que el overlay no desborde */
+}
+
+/* Capa oscura que oscurece la foto de fondo */
+.quienes-somos .overlay {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Ajusta opacidad (0.6 => 60% oscuro) */
+                       /* Por encima del fondo, debajo del contenido */
+}
+
+/* Contenido por encima del overlay */
+.quienes-somos .contenido {
+  position: relative;
+  z-index: 2;                     /* Que quede encima de .overlay */
+  max-width: 1200px;             /* Limita el ancho si quieres */
+  margin: 0 auto;                /* Centra horizontalmente */
+  text-align: center;            /* Opcional, para centrar texto */
+}
+
+/* Título de la sección */
+.titulo-seccion {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de las columnas */
+.columnas {
+  display: flex;                  /* Para alinear en fila las 3 columnas */
+  flex-wrap: wrap;               /* Permite que se ajusten en pantallas pequeñas */
+  gap: 2rem;                     /* Espacio entre columnas */
+  justify-content: center;       /* Centra las columnas */
+}
+
+/* Cada columna */
+.col {
+  flex: 1;                       /* Ocupa espacio para repartirse con las demás */
+  min-width: 220px;             /* Evita que la columna se ponga demasiado estrecha */
+  max-width: 320px;             /* Tamaño máximo opcional */
+  background-color: rgba(255,255,255,0.1); /* Fondo semitransparente leve si deseas */
+  padding: 1rem;
+  border-radius: 8px;            /* Bordes redondeados si gustas */
+}
+
+/* Encabezado de cada columna */
+.col h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #fff; /* Asegura texto blanco */
+}
+
+/* Texto de cada columna */
+.col p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f0f0; /* Gris claro para mejor lectura */
+}
+/*fin quienes somos nuevo*/
+
 
 
 .red1{
@@ -253,110 +321,154 @@ main::-webkit-scrollbar {
   
 }
 /*footer*/
-/* Estilos generales del footer */
+/* Footer general */
 .piePagina {
-  background-color: #373435;
-  padding: 20px;
-  color: aliceblue; /* Para que el texto sea blanco */
+  background-color: #373435;  /* Fondo oscuro */
+  color: aliceblue;          /* Texto claro */
+  padding: 20px;             /* Espacio alrededor */
 }
 
-/* Bloque superior (formulario) */
-.footer-top {
-  margin-bottom: 20px; /* Algo de espacio respecto al bloque de abajo */
+/* Contenedor principal de dos columnas */
+.footer-container {
+  display: flex;
+  gap: 10rem;                     /* Separación horizontal entre columnas */
+  justify-content: space-between;/* Reparte las columnas a los extremos */
+  align-items: flex-start;       /* Alinear columnas en la parte superior */
 }
 
-/* Formulario */
-/* Contenedor principal del formulario */
-.form {
-  background-color: #EDEDEE;      
-  border: 3px solid orange;       
-  border-radius: 10px;            
-  padding: 1.5rem;                
-  max-width: 500px;               /* Ancho máximo para que luzca mejor */
-  margin: 0 auto;                 /* Centrar el formulario horizontalmente */
+/* Cada columna */
+.footer-col {
+  flex: 1;                       /* Para que se repartan el espacio */
+  min-width: 300px;             /* Evita que se encoja demasiado */
 }
 
-/* Título del formulario */
+/* Columna con el formulario */
+.footer-form .form {
+  background-color: #EDEDEE;     /* Fondo claro para el form */
+  
+  padding: 1rem;
+  color: #333;                   /* Texto oscuro dentro del form */
+}
+
 .form-title {
-  text-align: center;
-  color: #818688;                 /* Gris para mantener el estilo */
+  margin-top: 0;
   margin-bottom: 1rem;
-  font-weight: 300;
-  font-size: 1.4rem;
+  color: #373435;
+  text-align: center;
 }
 
-/* Agrupación de cada campo para espaciar */
 .form-group {
   margin-bottom: 1rem;
 }
 
-/* Estilo de las etiquetas */
 .form-label {
-  display: block;                 /* Que ocupe una línea entera */
-  margin-bottom: 0.5rem;          /* Separación con el input */
-  color: #818688;                 /* Gris */
-  font-weight: 300;               /* Ligero */
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #373435; /* Ajusta el color si lo deseas */
 }
 
-/* Campos de texto e inputs */
 .form-control {
-  width: 100%;                    /* Todo el ancho */
-  border: 3px solid orange;       /* Borde naranja */
-  border-radius: 5px;             /* Ligeramente redondeado */
-  padding: 0.5rem;                /* Espaciado interno */
-  font-size: 1rem;                /* Ajusta el tamaño de texto */
-  color: #333;                    /* Texto oscuro */
-  box-sizing: border-box;
+  width: 100%;
+  border: 3px solid orange;
+  border-radius: 5px;
+  padding: 0.5rem;
 }
 
-/* Contenedor del botón, para centrarlo */
+/* Botón */
 .buttoncontainer {
   text-align: center;
-  margin-top: 1rem;
 }
 
-/* Botón de envío */
 .btn {
-  background-color:#DE6600; 
-  color: aliceblue;
-  border: none;                   /* Sin borde extra */
-  padding: 0.75rem 1.25rem;       /* Espaciado interno */
-  border-radius: 5px;             /* Esquinas redondeadas */
-  font-size: 1rem;                /* Tamaño de fuente */
-  cursor: pointer; 
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);                /* Mano al pasar el mouse */
+  background-color:#EDEDEE; /* Ajusta tu variable de color si la tienes */
+  color:#373435;
+  border: 1px solid orange;
+  padding: 0.75rem 1.25rem;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  box-shadow:  0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Hover del botón */
-.btn:hover {
-  background-color: aliceblue;    /* Fondo claro */
-  color:#373435;        /* Texto azul */
-  border: 1px solid var(--lightblue);
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Columna de la derecha (redes, mails) */
+.footer-links{
+  text-align: center;
 }
-
-/* Lista de info (redes, mails) */
-.info-list {
-  list-style: none; /* Quita viñetas */
-  padding: 0;       
+.footer-links .info-list {
+  list-style: none;
+  padding: 0;
+  
   margin: 0;
 }
 
-.info-list li {
-  margin-bottom: 10px; /* Espacio entre cada elemento */
+.footer-links .info-list li {
+  margin-bottom: 1rem;
+  font-size:2rem ;
 }
 
-/* Links dentro de la lista */
-.info-list a {
-  color: aliceblue;      /* Texto blanco */
-  text-decoration: none; /* Sin subrayado, si así lo prefieres */
+/* Enlaces */
+.footer-links a {
+  color: aliceblue;
+  text-decoration: none;
 }
 
-/* Ion-icon dentro de la lista, por si quieres ajustarlo */
-.info-list ion-icon {
-  font-size: 1.2rem; /* Ajusta según tu gusto */
-  vertical-align: middle; /* Para centrar mejor con el texto */
-  margin-right: 5px; 
+.footer-links ion-icon {
+  font-size: 24px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Sección blanca inferior */
+.footer-empresas {
+  background-color: #fff; /* Fondo blanco */
+  color: #333;            /* Texto oscuro */
+  padding: 10px;          /* Espacio vertical y horizontal */
+  text-align: center;     /* Centramos el contenido */
+  margin-top: 20px;       /* Espacio antes de esta sección */
+  
+}
+
+.footer-empresas h3 {
+  margin-bottom: 50 px;
+  padding-top:30px ;
+  padding-bottom:30px ;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.empresas-grid {
+  margin-top: 20px;
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;             
+  align-items: center;
+}
+.empresa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo en forma de círculo */
+.empresa{
+  border: 1px solid black;
+}
+.empresa .logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;           /* Círculo */
+  background-color: #ccc;       /* Color de respaldo (se sobrescribe con inline) */
+  margin-bottom: 10px; 
+   margin-top:10px ; 
+   margin-left: 10px;       
+}
+
+/* Nombre de la empresa */
+.empresa p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
 }
 
 
