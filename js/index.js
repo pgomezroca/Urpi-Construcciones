@@ -13,10 +13,11 @@ navbarLinks.forEach(link => {
 
   // Cerrar el menú hamburguesa en móviles al hacer clic en un enlace
   link.addEventListener('click', function () {
-    if (navbarCollapse.classList.contains('show')) {
-      new bootstrap.Collapse(navbarCollapse, {
-        toggle: false
+    if (window.innerWidth < 992) { // Solo en móviles (Bootstrap usa 992px como breakpoint)
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false // Evita que vuelva a abrirse inmediatamente
       });
+      bsCollapse.hide(); // Cierra el menú correctamente
     }
   });
 });
