@@ -34,7 +34,7 @@ body{
 
 /*header*/
 .icono{
-  width: 100px;
+  width: 120px;
   height: auto;
   margin-left: 23px;
 }
@@ -52,12 +52,16 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
-  background-color:var(--dark); 
+  padding: px 10px;
+  background-color:#e8ecec; 
+  color: #373435;
   z-index:3 ;
 }
 .contact-info {
-  text-align: right;
+  color:#373435;
+  text-align:left;
+  justify-content:center ;
+  font-family:'Roboto-Regular',sans-serif ;
 }
 
 .contact-info p {
@@ -65,7 +69,7 @@ body{
 }
 
 .contact-info a {
-  color: aliceblue;
+  color:#373435;
   text-decoration: none;
 }
 
@@ -73,6 +77,7 @@ body{
   width: 20px;
   height: 20px;
   margin-right: 5px;
+  color: #373435;
 }
 .navbar{
     
@@ -84,8 +89,8 @@ body{
 }
 .nav-link{
   color: #EDEDEE !important;
-  font-size:3,5rem ;
-  font-weight: 900;
+  font-size:3,6rem ;
+  font-weight: 600;
   cursor: pointer;
 }
 /* Efecto hover con transición suave */
@@ -98,7 +103,13 @@ body{
   background-color: #373435;
   transform: scale(1.1); 
 }
-
+.nav-link.active-link {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;        /* Más grueso */
+  text-underline-offset: 6px;            /* Más separado del texto */
+  color:#A0A6A7 !important; 
+  font-size: 1.2rem; 
+}
 .nav-item.dropdown:hover .dropdown-menu {
   display: block; 
 }
@@ -124,6 +135,7 @@ body{
 .navbar-nav .nav-link:hover
  {
   max-width: 300px;
+  text-decoration:none ;
 }
 ion-icon{
   color:aliceblue;
@@ -190,7 +202,17 @@ main::-webkit-scrollbar {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
-
+.bloque-proposito {
+  background-color: rgba(255,255,255,0.1); /* mismo fondo que .col */
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  color: #f0f0f0;
+  text-align: center;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* Contenedor de las columnas */
 .columnas {
   display: flex;                  /* Para alinear en fila las 3 columnas */
@@ -221,6 +243,46 @@ main::-webkit-scrollbar {
   font-size: 1rem;
   line-height: 1.5;
   color: #f0f0f0; /* Gris claro para mejor lectura */
+}
+.trayectoria{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem auto; /* centra como .bloque-proposito */
+  max-width: 1000px;
+  background-color: rgba(255, 255, 255, 0.1); /* mismo fondo */
+  padding: 1rem;
+  border-radius: 8px;
+  color: #f0f0f0;
+  
+}
+.contenido-trayectoria {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente dentro del bloque */
+  text-align: center;   
+}
+.trayectoria img{
+  max-width: 600px;
+}
+.imagen-trayectoria {
+  flex: 1;
+  min-width: 280px;
+}
+.imagen-trayectoria img {
+ 
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 30% 100%);
+    border-radius: 8px;
+  
 }
 /*fin quienes somos nuevo*/
 

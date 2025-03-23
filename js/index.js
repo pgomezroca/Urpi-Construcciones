@@ -4,18 +4,24 @@
 const navbarLinks = document.querySelectorAll('.nav-link');
 const navbarCollapse = document.querySelector('.navbar-collapse'); // Para colapsar el menú
 
-// 2. Iteramos sobre cada enlace para asignarle el comportamiento
+function clearActiveLinks() {
+  navbarLinks.forEach(link => link.classList.remove('active-link'));
+}
+
+// Recorremos cada link
 navbarLinks.forEach(link => {
-  // Redirección al pasar el mouse (mantiene tu funcionalidad original)
-  link.addEventListener('mouseover', function handleMouseOver() {
-    window.location.href = link.href;
+  link.addEventListener('click', function () {
+    // 1. Aplicar subrayado activo
+    clearActiveLinks(); 
+    this.classList.add('active-link');
   });
+
 
   // Cerrar el menú hamburguesa en móviles al hacer clic en un enlace
   link.addEventListener('click', function () {
-    if (window.innerWidth < 992) { // Solo en móviles (Bootstrap usa 992px como breakpoint)
+    if (window.innerWidth < 992) { 
       const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-        toggle: false // Evita que vuelva a abrirse inmediatamente
+        toggle: false 
       });
       bsCollapse.hide(); // Cierra el menú correctamente
     }
