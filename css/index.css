@@ -52,7 +52,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: px 10px;
+  padding: px 5px;
   background-color:#e8ecec; 
   color: #373435;
   z-index:3 ;
@@ -105,8 +105,8 @@ body{
 }
 .nav-link.active-link {
   text-decoration: underline;
-  text-decoration-thickness: 3px;        /* Más grueso */
-  text-underline-offset: 6px;            /* Más separado del texto */
+  text-decoration-thickness: 3px;        
+  text-underline-offset: 6px;            
   color:#A0A6A7 !important; 
   font-size: 1.2rem; 
 }
@@ -131,14 +131,13 @@ body{
   padding-right: 0;
 }
 
-/* Cambiar el color de fondo y el color del texto en :hover y :active de los enlaces de navegación */
 .navbar-nav .nav-link:hover
  {
   max-width: 300px;
   text-decoration:none ;
 }
 ion-icon{
-  color:aliceblue;
+  color:#373435;
   font-size:15px ;
 }
 .big{
@@ -167,16 +166,58 @@ main::-webkit-scrollbar {
   width: 0; 
   background: transparent; /* Fondo transparente */
 }
-
+/*imagen principal*/
+.imgcontainer img {
+  width: 100%;
+  height: auto;
+  display: block; 
+  object-fit: cover; 
+}
+.imgcontainer{
+  margin: 0;
+  position: relative;
+  width: 100vw; 
+  overflow: hidden; 
+}
+.imgcontainer .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Gris oscuro transparente */
+  z-index: 1;
+}
+.subtitleSmall{
+  margin-top: 10px; 
+  background-color: transparent;
+  font-weight: 300;
+  color:#e8ecec !important;
+  z-index: 10;
+}
+.row {
+  --bs-gutter-x: 0 !important; /* Elimina padding lateral de Bootstrap */
+  --bs-gutter-y: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.textContainer{
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  text-align: center;
+  width: 84%; 
+  color: #fff;
+  z-index: 3;
+}
 /*quienes somos nuevo*/
 /* Sección principal con imagen de fondo */
 .quienes-somos {
-  position: relative;                 /* Para que el .overlay se ubique encima */
+  position: relative;                 
   background: url("../img/casaeditada2.") no-repeat center center;
-  background-size: cover;            /* Ajusta la imagen para cubrir la sección */
-  padding: 4rem 2rem;                /* Espacio vertical y horizontal */
-  color: #fff;                       /* Texto blanco */
-  overflow: hidden;                  /* Asegura que el overlay no desborde */
+  background-size: cover;            
+  padding: 4rem 2rem;               
+  color: #fff;                       
+  overflow: hidden;                  
 }
 
 /* Capa oscura que oscurece la foto de fondo */
@@ -184,7 +225,7 @@ main::-webkit-scrollbar {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* Ajusta opacidad (0.6 => 60% oscuro) */
+  background: rgba(0, 0, 0, 0.5); /* Ajusta opacidad (0.6 => 60% oscuro) */
                        /* Por encima del fondo, debajo del contenido */
 }
 
@@ -254,7 +295,7 @@ main::-webkit-scrollbar {
   margin: 2rem auto; /* centra como .bloque-proposito */
   max-width: 1000px;
   background-color: rgba(255, 255, 255, 0.1); /* mismo fondo */
-  padding: 1rem;
+  
   border-radius: 8px;
   color: #f0f0f0;
   
@@ -268,10 +309,10 @@ main::-webkit-scrollbar {
   text-align: center;   
 }
 .trayectoria img{
-  max-width: 600px;
+  max-width: 800px;
 }
 .imagen-trayectoria {
-  flex: 1;
+  flex: 2;
   min-width: 280px;
 }
 .imagen-trayectoria img {
@@ -330,32 +371,7 @@ main::-webkit-scrollbar {
   font-size: 1rem;
   color: var(--lightblue);
 }
-.imgcontainer img {
-  width: 100%;
-  height: auto;
-  display: block; 
-  object-fit: cover; 
-}
-.imgcontainer{
-  margin: 0;
-  position: relative;
-  width: 100vw; 
-  overflow: hidden; 
-}
-.row {
-  --bs-gutter-x: 0 !important; /* Elimina padding lateral de Bootstrap */
-  --bs-gutter-y: 0 !important;
-  margin-right: 0 !important;
-  margin-left: 0 !important;
-}
-.textContainer{
-  position: absolute;
-  top: 15%;
-  left: 10%;
-  text-align: center;
-  
-  width: 84%; 
-}
+
 .subtitle{
   font-family: 'Roboto-Regular',sans-serif;
   font-weight: 300;
@@ -368,12 +384,7 @@ main::-webkit-scrollbar {
 .tittle{
   
 }
-.subtitleSmall{
-  margin-top: 10px; 
-  background-color: transparent;
-  font-weight: 300;
-  color: #7b3801;
-}
+
 .espaciado{
   padding-top: 30px;
   padding-bottom: 30px ;
