@@ -63,6 +63,9 @@ body{
   justify-content:center ;
   font-family:'Roboto-Regular',sans-serif ;
 }
+ionico{
+  color: #373435;
+}
 
 .contact-info p {
   margin: 5px 0;
