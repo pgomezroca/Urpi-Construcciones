@@ -7,7 +7,7 @@
  --dark:#373435;
 }
 :root {
-  scroll-padding-top: 180px; /* Ajusta a la altura de tu header */
+  scroll-padding-top: 140px; 
 }
 .custom-bg-body-tertiary {
   background-color: rgb(222, 102, 0); /* Aquí pones el color que deseas */
@@ -83,11 +83,9 @@ ionico{
   color: #373435;
 }
 .navbar{
-    
     display: flex;
     justify-content:center; 
     align-items:baseline !important; 
-    margin-right:0px !important;
    
 }
 .nav-link{
@@ -124,7 +122,7 @@ ionico{
 }
 .navbar-nav {
   display: flex; 
-  justify-content: center; 
+  justify-content:space-around; 
   width: 100%; 
   padding: 0; 
   margin: 0; 
@@ -145,10 +143,13 @@ ion-icon{
 }
 .big{
   font-size:1rem ;
-  margin-left:80px ;
+  
 }
 
-
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
 .custom-hover:hover{
   text-decoration: underline;
   color:var(--lightgray); 
@@ -187,7 +188,7 @@ main::-webkit-scrollbar {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Gris oscuro transparente */
+  background-color: rgba(0, 0, 0, 0.5); 
   z-index: 1;
 }
 .subtitleSmall{
@@ -198,17 +199,18 @@ main::-webkit-scrollbar {
   z-index: 10;
 }
 .row {
-  --bs-gutter-x: 0 !important; /* Elimina padding lateral de Bootstrap */
+  --bs-gutter-x: 0 !important; 
   --bs-gutter-y: 0 !important;
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
-.textContainer{
+.textContainer {
   position: absolute;
   top: 15%;
-  left: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
-  width: 84%; 
+  width: 90%; 
   color: #fff;
   z-index: 3;
 }
@@ -228,17 +230,17 @@ main::-webkit-scrollbar {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.5); /* Ajusta opacidad (0.6 => 60% oscuro) */
-                       /* Por encima del fondo, debajo del contenido */
+  background: rgba(0, 0, 0, 0.5); 
+                       
 }
 
 /* Contenido por encima del overlay */
 .quienes-somos .contenido {
   position: relative;
-  z-index: 2;                     /* Que quede encima de .overlay */
-  max-width: 1200px;             /* Limita el ancho si quieres */
-  margin: 0 auto;                /* Centra horizontalmente */
-  text-align: center;            /* Opcional, para centrar texto */
+  z-index: 2;                     
+  max-width: 1200px;             
+  margin: 0 auto;              
+  text-align: center;           
 }
 
 /* Título de la sección */
@@ -247,7 +249,7 @@ main::-webkit-scrollbar {
   margin-bottom: 2rem;
 }
 .bloque-proposito {
-  background-color: rgba(255,255,255,0.1); /* mismo fondo que .col */
+  background-color: rgba(255,255,255,0.1); 
   padding: 1rem;
   border-radius: 8px;
   margin-bottom: 2rem;
@@ -259,20 +261,20 @@ main::-webkit-scrollbar {
 }
 /* Contenedor de las columnas */
 .columnas {
-  display: flex;                  /* Para alinear en fila las 3 columnas */
-  flex-wrap: wrap;               /* Permite que se ajusten en pantallas pequeñas */
-  gap: 2rem;                     /* Espacio entre columnas */
-  justify-content: center;       /* Centra las columnas */
+  display: flex;                  
+  flex-wrap: wrap;              
+  gap: 2rem;                     
+  justify-content: center;       
 }
 
 /* Cada columna */
 .col {
-  flex: 1;                       /* Ocupa espacio para repartirse con las demás */
-  min-width: 220px;             /* Evita que la columna se ponga demasiado estrecha */
-  max-width: 320px;             /* Tamaño máximo opcional */
-  background-color: rgba(255,255,255,0.1); /* Fondo semitransparente leve si deseas */
+  flex: 1;                       
+  min-width: 220px;             
+  max-width: 320px;            
+  background-color: rgba(255,255,255,0.1); 
   padding: 1rem;
-  border-radius: 8px;            /* Bordes redondeados si gustas */
+  border-radius: 8px;     
 }
 
 /* Encabezado de cada columna */
@@ -384,9 +386,7 @@ main::-webkit-scrollbar {
  
 }
 
-.tittle{
-  
-}
+
 
 .espaciado{
   padding-top: 30px;
@@ -411,17 +411,14 @@ main::-webkit-scrollbar {
 /*footer*/
 /* Footer general */
 .piePagina {
-  background-color: #373435;  /* Fondo oscuro */
+  background-color:#A0A6A7;  
   color: aliceblue;          /* Texto claro */
   padding: 20px;             /* Espacio alrededor */
 }
 
 /* Contenedor principal de dos columnas */
 .footer-container {
-  display: flex;
-  gap: 10rem;                     
-  justify-content: space-between;/* Reparte las columnas a los extremos */
-  align-items: flex-start;       /* Alinear columnas en la parte superior */
+  
 }
 
 /* Cada columna */
@@ -432,10 +429,12 @@ main::-webkit-scrollbar {
 
 /* Columna con el formulario */
 .footer-form .form {
-  background-color: #EDEDEE;     /* Fondo claro para el form */
-  
+  background-color: #EDEDEE; 
+  border-radius:10px;
   padding: 1rem;
-  color: #333;                   /* Texto oscuro dentro del form */
+  color: #333;
+  margin:0 auto;
+  max-width:50% ;                  
 }
 
 .form-title {
@@ -509,11 +508,11 @@ main::-webkit-scrollbar {
 
 /* Sección blanca inferior */
 .footer-empresas {
-  background-color: #fff; /* Fondo blanco */
-  color: #333;            /* Texto oscuro */
-  padding: 10px;          /* Espacio vertical y horizontal */
-  text-align: center;     /* Centramos el contenido */
-  margin-top: 20px;       /* Espacio antes de esta sección */
+  background-color:#e9eced;
+  color: #333;            
+  padding: 10px;          
+  text-align: center;     
+  margin-top: 20px;       
   
 }
 
@@ -560,15 +559,102 @@ main::-webkit-scrollbar {
 }
 
 /*media queries*/
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  :root {
+    scroll-padding-top: 80px; 
+    scroll-margin-top: 80px;
+  }
   main {
     padding-top: 120px; /* Ajusta este valor según la altura de la navbar */
   }
   .icono {
-    margin-left: 10px; 
+    width: 90px;
+    margin-left: 5px; 
+  } 
+  ionico{
+    color: #373435;
+  }
+  .contact-info{
+    line-height:0.8;
+  }
+a{
+font-size:10px ;
 }
+.navbar-toggler {
+  padding: 0.15rem 0.3rem;  
+  margin: 0;               
+}
+
+/* Ajustar el tamaño del icono (si es un fondo) */
+.navbar-toggler-icon {
+  width: 20px;                
+  height: 20px;               
+  background-size: 20px 20px; 
+    
+}
+.navbar-nav .nav-link {
+  font-size: 0.9rem; 
+  padding: 0.5rem 1rem; 
+}
+.navbar-collapse {
+  padding: 0.5rem !important;
+  margin: 0 !important;
+}
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+.navbar-toggler-icon {
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+
+.textContainer {
+      top: 25%;
+      width: 95%;
+  }
+  
+  
 #quienes-somos {
   scroll-margin-top: 100px; 
+}
+.titulo-seccion {
+  font-size: 1,5rem;
+  margin-bottom: 2rem;
+}
+.trayectoria {
+  position: relative;
+  display: block !important;  
+  padding: 0;      /* Reducir padding si es necesario */
+}
+.imagen-trayectoria {
+  position: relative;  /* Mantiene el flujo normal para la imagen */
+}
+/* La imagen ocupa todo el ancho del contenedor */
+.imagen-trayectoria img {
+  width: 100%;
+  height: auto;
+  display: block;
+  clip-path: none;
+}
+
+/* El texto se superpone sobre la imagen */
+.contenido-trayectoria {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction:column ;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para legibilidad */
 }
   .footer-container {
     flex-direction: column;
@@ -590,6 +676,47 @@ main::-webkit-scrollbar {
   
   .footer-links .info-list {
     display: block;
+  }
+  .footer-form .form {
+    width: 95%;         
+    max-width: 95%;     
+    margin: 0 auto;     
+  }
+  .footer-empresas {
+    width: 100%;
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #A0A6A7;
+  }
+  
+  /* Reducimos el tamaño del título */
+  .footer-empresas h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  /* Para la grilla, pasamos a 2 columnas para ocupar mejor el ancho */
+  .empresas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  
+  /* Reducimos el tamaño de cada "empresa" */
+  .empresa p {
+    font-size: 0.9rem;
+  }
+  
+  /* Ajustamos el tamaño del logo */
+  .logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  .piePagina{
+    padding: 5;
   }
 }
 @media (max-width: 600px) {
