@@ -10,7 +10,7 @@
   scroll-padding-top: 140px; 
 }
 .custom-bg-body-tertiary {
-  background-color: rgb(222, 102, 0); /* Aquí pones el color que deseas */
+  background-color: rgb(222, 102, 0); 
 }
 html {
   scroll-behavior: smooth;
@@ -21,7 +21,7 @@ html, body {
 }
 main {
   margin-top: 100px;
-  /* Elimina overflow-y: scroll; */
+  
 }
 #quienes-somos{
   scroll-margin-top: 600px; 
@@ -59,7 +59,7 @@ body{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: px 5px;
+  padding:  5px;
   background-color:#e8ecec; 
   color: #373435;
   z-index:3 ;
@@ -70,10 +70,12 @@ body{
   justify-content:center ;
   font-family:'Roboto-Regular',sans-serif ;
 }
-ionico{
-  color: #373435;
+.icono-instagram .svg-ig {
+  width: 22px;
+  height: 22px;
+  color: #373435; /* Color base del ícono */
+  transition: transform 0.3s ease;
 }
-
 .contact-info p {
   margin: 5px 0;
 }
@@ -304,10 +306,8 @@ main::-webkit-scrollbar {
   align-items: stretch;
   flex-wrap: wrap;
   gap: 2rem;
-  margin: 2rem auto; /* centra como .bloque-proposito */
-  max-width: 1000px;
+  margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.1); /* mismo fondo */
-  
   border-radius: 8px;
   color: #f0f0f0;
   
@@ -317,14 +317,17 @@ main::-webkit-scrollbar {
   min-width: 280px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* centra verticalmente dentro del bloque */
-  text-align: center;   
+  justify-content: center; 
+  text-align: left;
+  font-size: 1.6rem; 
+  line-height: 1.6; 
+  padding-left: 1rem;
 }
 .trayectoria img{
   max-width: 800px;
 }
 .imagen-trayectoria {
-  flex: 2;
+  flex: 1;
   min-width: 280px;
 }
 .imagen-trayectoria img {
@@ -564,6 +567,10 @@ main::-webkit-scrollbar {
     scroll-padding-top: 1px; 
     scroll-margin-top: 1px;
   }
+  .icono-instagram .svg-ig {
+    width: 16px;
+    height: 16px;
+  }
   main {
     margin-top: 80px;            
     min-height: calc(100vh - 80px);   
@@ -611,6 +618,7 @@ font-size:10px ;
   height: 20px;
   background-size: 20px 20px;
 }
+/*carousel*/
 
 .textContainer {
       top: 25%;
@@ -619,17 +627,16 @@ font-size:10px ;
   
   
 #quienes-somos {
-  scroll-margin-top: 100px; 
+  scroll-margin-top: 40px; 
 }
 .titulo-seccion {
   font-size: 1,5rem;
-  margin-bottom: 2rem;
+  margin-bottom:5rem;
 }
 .trayectoria {
   position: relative;
   display: block !important;  
-  padding: 0;      /* Reducir padding si es necesario */
-}
+  padding: 0;}     
 .imagen-trayectoria {
   position: relative;  /* Mantiene el flujo normal para la imagen */
 }
